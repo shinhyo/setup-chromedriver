@@ -19,7 +19,7 @@ async function run() {
       case "linux":
         arch = "linux64";
     }
-    await exec.exec(path.join(__dirname, "setup-chromedriver.sh"), [
+    await exec.exec("bash " + path.join(__dirname, "setup-chromedriver.sh"), [
       version,
       arch
     ]);

@@ -16,13 +16,13 @@ jobs:
     steps:
     - uses: actions/checkout@v1
 
-    - run: npm ci
+    - run: npm install
     - run: npm run build
     - run: npm test
     - uses: ./
       with:
         chromedriver-version: '77.0.3865.40'
-    - name: setup
+    - name: testing
       run: |
         sudo pip3 install selenium
         export DISPLAY=:99
