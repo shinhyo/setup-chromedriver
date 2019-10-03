@@ -3,7 +3,16 @@ on: [ push, pull_request ]
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false
+      matrix:
+        operating-system:
+          - ubuntu-18.04
+          - ubuntu-16.04
+          - windows-2019
+          - windows-2016
+          - macOS-latest
     steps:
     - uses: actions/checkout@v1
 
@@ -20,3 +29,4 @@ jobs:
         chromedriver --url-base=/wd/hub &
         sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # disable headless mode
         python3 $GITHUB_WORKSPACE/__tests__/chromedriver.py
+      shell: bash
