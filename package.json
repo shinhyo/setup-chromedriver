@@ -1,6 +1,6 @@
 {
   "name": "setup-chromedriver",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "private": true,
   "description": "setup-chromedriver",
   "main": "lib/setup-chromedriver.js",
@@ -26,7 +26,7 @@
     "@actions/exec": "^1.1.1",
     "@actions/github": "^5.0.3",
     "@actions/io": "^1.1.2",
-    "@actions/tool-cache": "^1.7.2",
+    "@actions/tool-cache": "^2.0.1",
     "semver": "^7.3.5",
     "typed-rest-client": "^1.8.6"
   },
@@ -37,7 +37,7 @@
     "@types/semver": "^7.3.9",
     "husky": "^8.0.1",
     "jest": "^27.5.1",
-    "jest-circus": "^27.5.1",
+    "jest-circus": "^28.1.3",
     "prettier": "^2.6.0",
     "selenium-webdriver": "^4.1.1",
     "ts-jest": "^27.1.3",
